@@ -1,0 +1,7 @@
+<button class="category-button"
+            ng-class="{active: isActive===category }"
+            ng-click="getFlashCardsByCategory(category)"
+            ng-repeat="category in categories">
+        {{category}}
+    </button>
+    <button class="category-button" ng-click="getFlashCardsByCategory()">Reset</button>
