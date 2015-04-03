@@ -10,6 +10,7 @@
 </head>
 <body ng-app="FlashCards">
 <div ng-controller="MainController">
+	<button class="category-button" ng-click="getFlashCards(category)" ng-repeat="category in categories">{{category}}</button>
 	<div class="flash-card" ng-repeat="card in flashCards | orderBy: 'question'" ng-controller="FlashCardController">
 		<h1>{{card.question | uppercase}}</h1>
 		<ul class="flash-card-answers">
