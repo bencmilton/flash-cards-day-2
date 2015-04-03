@@ -1,10 +1,8 @@
 app.controller ('MainController', function ($scope, FlashCardsFactory) {
 
-    $scope.isActive = false;
-
     $scope.getFlashCardsByCategory = function (category) {
         FlashCardsFactory.getFlashCards(category).then(function (response) {
-            $scope.isActive = true;
+            $scope.isActive = category;
             $scope.flashCards = response;
         });
     };
