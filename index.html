@@ -23,7 +23,7 @@
 
     </div>
 <div ng-controller="MainController">
-    <div ng-include="'templates/buttons.html'"></div>
+    <div ng-include="'templates/buttons.html'" id="buttons"></div>
     <div class="flash-card"
          ng-repeat="card in flashCards | orderBy: 'question'"
          ng-controller="FlashCardController">

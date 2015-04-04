@@ -1,22 +1,48 @@
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  }
+
+body {
+  background-color: #edf5f6; 
+}
 
 .category-button {
-  border: 1px solid black;
-  background: none;
+  background-color: #415563;
+  color: white;
+  border: 1px solid #415563;
   padding: 20px;
-  margin-right: 15px;
+  margin-right: 20px;
   cursor: pointer;
-  outline: none; }
-  .category-button.active {
-    background: gainsboro; }
+  outline: none; 
+  
+}
+
+  .category-button.reset {
+    margin: 0;
+    background-color: #2E384C;
+  }
+
+button:hover{
+  /*color: #FFC7AC;*/
+  /*color: #44D1B9;*/
+  color: #FFEFA0;
+  /*color: #FFD400;*/
+}
+
+#buttons{
+  width: 34%;
+  margin: 0 auto;
+  display: box;
+  box-align: center;
+}
 
 .flash-card {
+  background-color: #fbfdfb;
   width: 60%;
   height: 400px;
   margin: 0 auto;
   margin-top: 40px;
-  border: 1px solid black;
+  border: 1px solid gray;
   font-family: Helvetica;
   padding: 50px;
   box-shadow: 3px 4px 5px 1px #6b6b6b; }
@@ -31,34 +57,45 @@
     .flash-card .flash-card-answers:before, .flash-card .flash-card-answers:after {
       content: " ";
       /* 1 */
-      display: table;
       /* 2 */ }
     .flash-card .flash-card-answers:after {
       clear: both; }
   .flash-card .flash-card-answer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    vertical-align: middle;
+    background-color: white;
     min-height: 100px;
     text-align: center;
-    border: 1px solid black;
-    padding: 20px;
+    border: 1px solid gray;
+    padding: 30px;
     float: left;
     width: 32%;
     margin-right: 2%;
     cursor: pointer;
-    line-height: 1.3em; }
+    /*line-height: 1.3em;*/ }
     .flash-card .flash-card-answer:last-child {
       margin-right: 0; }
 
 .answer-feedback {
+  clear: both;
+  margin: 30px;
+  padding: 40px;
   text-align: center;
-  margin-top: 50px;
-  font-weight: bold; }
-  .answer-feedback.correct {
-    color: green; }
-  .answer-feedback.incorrect {
-    color: red; }
+  font-weight: bold; 
+  vertical-align: bottom;
+}
+
+.correct {
+    color: #317839; }
+.incorrect {
+    color: #932432; }
 
 #statistics {
-  padding: 40px; }
+  padding: 40px; 
+  font-family: Helvetica;
+}
   #statistics:before, #statistics:after {
     content: " ";
     /* 1 */
@@ -76,3 +113,7 @@
         margin-right: 0; }
       #statistics #scoreboard h3 span {
         font-weight: bold; }
+        
+      
+ .active {
+    background: #A3B2C2; }
